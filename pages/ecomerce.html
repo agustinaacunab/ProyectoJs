@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="app">Proyecto Final JS</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+</head>
+<body>
+   <h1 id="titulo" class="Inicio">Bienvenido</h1>
+   <p id="parrafo1">Este es un texto de prueba</p>
+   <h2 id="opciones">Area de opciones</h2>
+   <ul id="lista" >
+    
+   </ul>
+   <div><p>Elegi tus opciones</p>
+    </div>
+<ul class="paises"> 
+    <div>
+    <li>madrid</li>
+    <li>Barcelona</li>
+    <li>Valencia</li>
+</div>
+</ul>
+<div id="prueba">
+    <p class="texto"></p>
+</div>
+<input type="radio" class="radio" checked>
+<input type="radio" class="radio" >
+<input type="radio" class="radio" >
+   <p id="Pais.Origen"> Seleccione pais de origen</p>
+
+   <p id="Mes.Salida">Seleccione mes de salida</p>
+   <button id="btnPrincipal">click</button>
+   <input type="button" value="Click input" onclick="alert('Vuelo agregado')">
+   <section>
+    <p id="parrafo" class="danger-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ullam aliquam delectus perferendis quidem vel tenetur eum, esse modi iusto illo provident minus, quisquam, dolore velit tempora unde quo sit.</p>
+   </section>
+<input  id= "Country" type="text">
+<input id="Price" type="number">
+
+   <div>
+    <p id="ofertas">Paquetes pre-determinados</p>
+    <ul>
+    <div>
+        <li>africa</li>
+        <li>asia</li>
+        <li>America Latina</li>
+    </div>
+    </ul>
+   </div>
+   <section id="listadoPromos"></section>
+
+   <button id="btnMain">Agregar</button>
+   <input  id= "destination" type="text">
+   <input id="finalPrice" type="text" value="Deviajes.com">
+   <script>
+    let inputDestination = document.getElementById('destination')
+    inputDestination.oninput = (evt) => {console.log ('input; ', evt.value)}
+   </script>
+<div class="FORM-DEV">
+   <form id="formularioPresupuesto">
+    <p>Indique pais de salida</p>
+    <input id="Salida" type="text" name="paisSalida">
+    <p>Indique horario de Salida</p>
+    <input type="horarioSalida" type="number" value="Deviajes.com">
+    <p>Indique destino</p>
+    <input id="destinoLlegada" type="text" name="destinoLlegada">
+    <p>Indique horario deseado de llegada</p>
+    <input type="horarioLlegada" type="number" value="horarioLlegada">
+    <p>Indique tipo de hotel (basico, superior, lujo)</p>
+    <input id="tipoHotel" type="text" name="tipoHoteles">
+    <p>Indique Cantidad de noches</p>
+    <input type="cantidadNoches" type="number" value="Cant. Minima 3">
+
+    <button type="boton" type="submit" value="enviar" id="btnFormulario"> Enviar</button>
+   </form>
+</div>
+
+   
+   <script>
+    
+     let miFormulario = document.getElementById ('formularioPresupuesto')
+    miFormulario.addEventListener('submit', validarFormulario)
+    function validarFormulario (evt){
+        evt.preventDeFault()
+        alert ('Presupuesto solicitado')
+    }
+    
+    let boton2 = document.getElementById("btnFormulario")
+    boton2.addEventListener("click", respuestaClick)
+    function respuestaClick (){
+        console.log("Presupuesto enviado");
+        alert ('Presupuesto Solicitado. Se le contactara a la brevedad');
+    }
+
+   </script>
+<script>
+    let boton1 = document.getElementById("btnPrincipal")
+    boton1.addEventListener("click", respuestaClick)
+    function respuestaClick (){
+        console.log("Ha agregado un elemento al carrito");
+        alert('Excursion Agregada al carrito de compras');
+
+    }
+
+</script>
+
+    <script src="../js/index.js"></script>
+</body>
+</html>
